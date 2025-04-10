@@ -14,6 +14,11 @@ export default function Home() {
           href='/propertybranding'>
           PQT Propety Branding
         </Link>
+        <Link
+          className='hover:bg-black hover:text-white py-2 px-4 rounded-md'
+          href='/imagecrop'>
+          Bulk Image Crop
+        </Link>
       </div>
     </main>
   );

@@ -96,14 +96,14 @@ export function ImageUploader() {
 
         // Add the blob to the ZIP file
         const arrayBuffer = await blob.arrayBuffer();
-        zip.file(`resized-${image.name}`, arrayBuffer);
+        zip.file(`PQT-${image.name}`, arrayBuffer);
       }
       // Generate the ZIP file and trigger download
       const zipBlob = await zip.generateAsync({ type: "blob" });
       const zipUrl = URL.createObjectURL(zipBlob);
       const a = document.createElement("a");
       a.href = zipUrl;
-      a.download = "resized-images.zip";
+      a.download = "PQT-images.zip";
       a.click();
       URL.revokeObjectURL(zipUrl);
     } catch (error) {
